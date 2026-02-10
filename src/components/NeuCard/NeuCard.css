@@ -1,0 +1,9 @@
+.neu-card {
+  background: #e0e5ec;
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
