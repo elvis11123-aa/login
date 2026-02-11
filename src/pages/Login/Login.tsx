@@ -15,10 +15,11 @@ export function Login() {
   }
 
   return (
-    <NeuCard>
+    <div className='grid-container'>
       {/* Panel izquierdo */}
-      <InfoPanel>
-        <img src={logo} alt="Robotic Minds Logo" style={{ width: '180px' }} />
+      <div className='grid-item'>
+          <InfoPanel>
+        <center><img src={logo} alt="Robotic Minds Logo" style={{ width: '180px' }} /></center>
         <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <li>IDP solicita licencias (elige robots).</li>
           <li>El aprobador aprueba o rechaza.</li>
@@ -28,9 +29,12 @@ export function Login() {
         <p style={{ fontSize: '11px', color: '#888', textAlign: 'center', marginTop: 'auto' }}>
           Copyright © Robotic Minds Industries
         </p>
-      </InfoPanel>
-
+        </InfoPanel>  
+      </div>
+      
       {/* Panel derecho */}
+      <div className='grid-item'>
+      <NeuCard>
       <div className="login-form">
         <h1 className="login-form__title">Iniciar Sesión</h1>
         <p className="login-form__subtitle">Ingresa tus credenciales para continuar.</p>
@@ -49,7 +53,9 @@ export function Login() {
         <Button label="ENTRAR" onClick={handleLogin} />
         <p className="login-form__help">¿Problemas para acceder?</p>
       </div>
-    </NeuCard>
+      </NeuCard>
+    </div>
+    </div>
   )
 }
 
