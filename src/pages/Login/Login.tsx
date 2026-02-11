@@ -1,3 +1,4 @@
+import {  Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { useState } from 'react'
 import logo from '../../components/logo-robotic.png'
 import { NeuCard } from '../../components/NeuCard/NeuCard'
@@ -20,13 +21,13 @@ export function Login() {
       <div className='grid-item'>
           <InfoPanel>
         <center><img src={logo} alt="Robotic Minds Logo" style={{ width: '180px' }} /></center>
-        <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <li>IDP solicita licencias (elige robots).</li>
-          <li>El aprobador aprueba o rechaza.</li>
-          <li>TIC valida y activa licencias.</li>
-          <li>Reasignación de licencias/cartillas cuando se necesite.</li>
+        <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '60px' }}>
+          <li>Sistema de Gestion de Operaciones y Recursos.</li>
+          <li>Acceso a Suites Perzonalizadas por Rol.</li>
+          <li>Plataforma de Control Centralizado.</li>
+          <li>Portal de Servicios Internos.</li>
         </ul>
-        <p style={{ fontSize: '11px', color: '#888', textAlign: 'center', marginTop: 'auto' }}>
+        <p style={{ fontSize: '11px', color: '#888', textAlign: 'right', marginTop: 'auto' }}>
           Copyright © Robotic Minds Industries
         </p>
         </InfoPanel>  
