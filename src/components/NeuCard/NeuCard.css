@@ -12,3 +12,11 @@
   gap: 10px;
   margin-top: 50px;
 }
+
+@media (max-width: 768px) {
+  .neu-card {
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 8px;
+  }
+}
