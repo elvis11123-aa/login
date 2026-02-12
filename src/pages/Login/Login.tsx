@@ -5,7 +5,6 @@ import { InfoPanel } from '../../components/InfoPanel/InfoPanel'
 import { Input } from '../../components/Input/input'
 import { Button } from '../../components/Button/button'
 import { SupportDialog } from '../../components/SupportDialog/SupportDialog'
-import { PasswordInput } from '../../components/Password/PasswordInput'
 import './Login.css'
 
 export function Login() {
@@ -58,11 +57,7 @@ export function Login() {
           </div>
           <div className="login-form__field">
             <label className="login-form__label">Contraseña</label>
-            <PasswordInput
-              value={password}
-              onChange={setPassword}
-                placeholder="••••••••"
-            />
+            <Input type="password" placeholder="••••••••" value={password} onChange={setPassword} />
           </div>
         </div>
 
