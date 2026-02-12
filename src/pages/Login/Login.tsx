@@ -1,21 +1,23 @@
-import {  Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { useState } from 'react'
 import logo from '../../components/logo-robotic.png'
 import { NeuCard } from '../../components/NeuCard/NeuCard'
 import { InfoPanel } from '../../components/InfoPanel/InfoPanel'
 import { Input } from '../../components/Input/input'
 import { Button } from '../../components/Button/button'
+import { SupportDialog } from '../../components/SupportDialog/SupportDialog'
 import './Login.css'
 
 export function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleLogin = () => {
     console.log('Email:', email, 'Password:', password)
   }
 
   return (
+    <>
     <div className='grid-container'>
       {/* Panel izquierdo */}
       <div className='grid-item'>
@@ -52,11 +54,13 @@ export function Login() {
         </div>
 
         <Button label="ENTRAR" onClick={handleLogin} />
-        <p className="login-form__help">¿Problemas para acceder?</p>
+        <p className="login-form__help" onClick={() => setIsOpen(true)}>¿Problemas para acceder?</p>
       </div>
       </NeuCard>
     </div>
     </div>
+    <SupportDialog isOpen={isOpen} onClose={() => setIsOpen(false)} />
+    </>
   )
 }
 
