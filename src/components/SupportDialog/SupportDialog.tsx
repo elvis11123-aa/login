@@ -1,6 +1,6 @@
-import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
-import logo from '../logo-robotic.png'
+import { Dialog, DialogTitle } from '@headlessui/react'
 import './SupportDialog.css'
+import { InfoPanel } from '../../components/InfoPanel/InfoPanel'
 
 interface SupportDialogProps {
   isOpen: boolean
@@ -11,13 +11,9 @@ export function SupportDialog({ isOpen, onClose }: SupportDialogProps) {
   return (
     <Dialog open={isOpen} onClose={onClose} className="dialog-overlay">
       <div className="dialog-backdrop" onClick={onClose} />
-      <DialogPanel className="dialog-panel">
-        <center>
-          <img src={logo} alt="Robotic Minds Logo" style={{ width: '180px', marginBottom: '20px' }} />
-        </center>
-        
+        <InfoPanel>
         <DialogTitle className="dialog-title">Soporte Técnico</DialogTitle>
-        
+
         <p className="dialog-text">
           En caso de que experimente algún problema durante el inicio de sesión o el acceso al sistema, 
           le solicitamos contactar a nuestro equipo de soporte técnico a través del correo{' '}
@@ -27,10 +23,10 @@ export function SupportDialog({ isOpen, onClose }: SupportDialogProps) {
           , donde recibirá la asistencia necesaria.
         </p>
 
-        <button onClick={onClose} className="dialog-close-btn">
+        <center><button onClick={onClose} className="dialog-close-btn">
           Cerrar
-        </button>
-      </DialogPanel>
+        </button></center>
+        </InfoPanel>
     </Dialog>
   )
 }

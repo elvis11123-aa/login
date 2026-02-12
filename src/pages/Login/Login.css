@@ -81,6 +81,9 @@
   .login-form__subtitle {
     font-size: 12px;
   }
+  .grid-container .grid-item:first-child {
+    display: none;
+  }
 }
 
 .grid-item {
