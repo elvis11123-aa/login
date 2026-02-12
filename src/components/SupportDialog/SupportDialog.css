@@ -51,7 +51,7 @@
 .dialog-close-btn {
   width: 50%;
   padding: 12px;
-  background-color: #222;
+  background-color: #222 !important;
   color: white;
   border: none;
   border-radius: 6px;
@@ -62,5 +62,6 @@
 }
 
 .dialog-close-btn:hover {
-  background-color: #0074BD;
+  background-color:white !important;
+  color: #222;
 }

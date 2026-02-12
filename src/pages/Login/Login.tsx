@@ -23,11 +23,19 @@ export function Login() {
       <div className='grid-item'>
           <InfoPanel>
         <center><img src={logo} alt="Robotic Minds Logo" style={{ width: '180px' }} /></center>
-        <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '60px' }}>
-          <li>Sistema de Gestion de Operaciones y Recursos.</li>
-          <li>Acceso a Suites Perzonalizadas por Rol.</li>
-          <li>Plataforma de Control Centralizado.</li>
-          <li>Portal de Servicios Internos.</li>
+        <ul className="info-list">
+          <li className="bullet-yellow">
+            Sistema de Gestion de Operaciones y Recursos.
+          </li>
+          <li className="bullet-blue">
+            Acceso a Suites Perzonalizadas por Rol.
+          </li>
+          <li className="bullet-red">
+            Plataforma de Control Centralizado.
+          </li>
+          <li className="bullet-green">
+            Portal de Servicios Internos.
+          </li>
         </ul>
         <p style={{ fontSize: '11px', color: '#888', textAlign: 'right', marginTop: 'auto' }}>
           Copyright © Robotic Minds Industries
